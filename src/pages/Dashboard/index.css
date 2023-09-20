@@ -1,0 +1,56 @@
+.container {
+    padding: 3rem;
+}
+
+.container h1 {
+    font-size: 3rem;
+}
+
+.cards {
+    display: flex;
+    /* justify-content: center; */
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.card {
+    width: 22rem;
+    height: 150px;
+    padding: 1rem 2rem;
+    background-color: #1c1a1d;
+    border-radius: .5rem;
+}
+
+.card p {
+    text-align: center;
+    font-size: 3rem;
+}
+
+.tables {
+    display: flex;
+    gap: 2rem;
+}
+
+table {
+    border-collapse: collapse;
+    margin-top: 2rem;
+    width: 46rem;
+}
+
+thead {
+    background-color: #1c1a1d;
+    box-shadow: 0 4px 16px -2px rgba(0, 0, 0, 0.25);
+    text-align: left;
+}
+
+tbody tr:hover {
+    background-color: rgba(28, 26, 29, 0.33);
+    cursor: default;
+}
+
+th,
+td {
+    /* border: 1px solid #fefefe; */
+    padding: 1.25rem;
+}
