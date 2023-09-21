@@ -1,0 +1,15 @@
+.tabs {
+    border-bottom: 1px solid #fefefe;
+    margin: 1rem 0;
+}
+
+.tab {
+    color: #fefefe;
+    display: inline-block;
+    padding: 1rem;
+    text-decoration: none;
+}
+
+.tab.active {
+    border-bottom: .125rem solid #fefefe;
+}

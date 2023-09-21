@@ -15,3 +15,33 @@
 
   min-height: 100vh;
 }
+
+.container {
+  padding: 3rem;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+table {
+  border-collapse: collapse;
+  margin-top: 2rem;
+  width: 46rem;
+}
+
+thead {
+  background-color: #1c1a1d;
+  box-shadow: 0 4px 16px -2px rgba(0, 0, 0, 0.25);
+  text-align: left;
+}
+
+tbody tr:hover {
+  background-color: rgba(28, 26, 29, 0.33);
+  cursor: default;
+}
+
+th,
+td {
+  padding: 1.25rem;
+}
