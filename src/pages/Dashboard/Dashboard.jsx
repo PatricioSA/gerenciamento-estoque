@@ -1,13 +1,16 @@
 import DashboardCard from '../../components/DashboardCard'
-import './index.css'
+import useCollection from '../../hooks/useCollection'
+import './dashboard.css'
 
 export default function Dashboard() {
+    const {stock} = useCollection()
+
     return (
         <section className='container'>
             <h1>Dashboard</h1>
             <section className="cards">
-                <DashboardCard title='Diversidade de itens' />
-                <DashboardCard title='Inventário total' />
+                <DashboardCard title='Diversidade de itens'/>
+                <DashboardCard title='Inventário total' number={stock.length}/>
                 <DashboardCard title='Itens recentes' />
                 <DashboardCard title='Itens acabando' />
             </section>
