@@ -1,20 +1,23 @@
 import { useState } from "react"
-import {v4 as uuidv4} from 'uuid'
+
 
 export default function useCollection() {
     const [stock, setStock] = useState(() => {
         const storage = localStorage.getItem('stock')
         if (!storage) return []
-        return JSON.parse(storage)
+        const items = JSON.parse(storage)
+        items.forEach((item) => {
+            item.createdAt = new Date(item.createdAt)
+            item.updatedAt = new Date(item.updatedAt)
+        })
+        return items
     })
 
-    const addItem = ({ itemName, itemQuantity, price, category, description }) => {
-        const id = uuidv4()
-        const item = { id, itemName, itemQuantity, price, category, description }
+    const addItem = ( item ) => {
         setStock(state => {
-            const newState = [...state, item]
-            localStorage.setItem('stock', JSON.stringify(newState))
-            return newState
+            const updatedItems = [...state, item]
+            localStorage.setItem('stock', JSON.stringify(updatedItems))
+            return updatedItems
         })
     }
 
