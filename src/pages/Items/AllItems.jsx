@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom"
 import useCollection from "../../hooks/useCollection"
 import CustomButton from "../../components/CustomButton"
+import DeleteButton from "../../components/DeleteButton"
 
 export default function AllItems() {
     const { stock } = useCollection()
@@ -41,6 +42,7 @@ export default function AllItems() {
                                     marginBottom="0.5rem"
                                 />
                             </Link>
+                            <DeleteButton itemId={item.id} itemName={item.name}/>
                         </td>
                     </tr>
                 ))}

@@ -6,10 +6,6 @@ export default function useCollection() {
         const storage = localStorage.getItem('stock')
         if (!storage) return []
         const items = JSON.parse(storage)
-        items.forEach((item) => {
-            item.createdAt = new Date(item.createdAt)
-            item.updatedAt = new Date(item.updatedAt)
-        })
         return items
     })
 
@@ -21,13 +17,13 @@ export default function useCollection() {
         })
     }
 
-    const removeTransaction = (id) => {
+    const deleteItem = (id) => {
         setStock(state => {
-            const newState = state.filter((transaction) => transaction.id !== id);
+            const newState = state.filter(item => item.id !== id);
             localStorage.setItem('stock', JSON.stringify(newState))
             return newState
         })
     }
 
-    return {stock, addItem, removeTransaction}
+    return {stock, addItem, deleteItem}
 }
