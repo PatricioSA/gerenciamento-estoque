@@ -2,7 +2,7 @@ import PropTypes from 'prop-types'
 import useCollection from '../hooks/useCollection'
 
 DeleteButton.propTypes = {
-    itemId: PropTypes.any,
+    itemId: PropTypes.string,
     itemName: PropTypes.string,
 }
 

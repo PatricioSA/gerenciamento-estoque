@@ -17,6 +17,10 @@ export default function useCollection() {
         })
     }
 
+    const getItem = (itemId) => {
+        return stock.find(item => item.id == itemId)
+    }
+
     const deleteItem = (id) => {
         setStock(state => {
             const newState = state.filter(item => item.id !== id);
@@ -25,5 +29,5 @@ export default function useCollection() {
         })
     }
 
-    return {stock, addItem, deleteItem}
+    return {stock, addItem, getItem, deleteItem}
 }
