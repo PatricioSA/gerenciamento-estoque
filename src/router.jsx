@@ -4,6 +4,7 @@ import Dashboard from './pages/Dashboard/Dashboard'
 import LayoutItemsPage from './pages/Items/LayoutItemsPage/LayoutItemsPage'
 import AllItems from './pages/Items/AllItems'
 import NewItem from './pages/Items/NewItem'
+import IndividualItem from './pages/Items/IndividualItem/IndividualItem'
 
 const router = createBrowserRouter([
     {
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
                     {
                         path: 'new',
                         element: <NewItem/>
+                    },
+                    {
+                        path: ':id',
+                        element: <IndividualItem/>
                     }
                 ]
             }

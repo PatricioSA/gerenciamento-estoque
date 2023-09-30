@@ -1,0 +1,12 @@
+.individual__item > div{
+    display: flex;
+    align-items: center;
+    column-gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.item__details {
+    background-color: black;
+    padding: 1rem;
+    border-radius: .5rem;
+}
