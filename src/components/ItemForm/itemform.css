@@ -19,10 +19,3 @@ input, select, textarea {
     margin-top: 0.5rem;
     margin-bottom: 1.5rem;
 }
-
-button {
-    background-color: #5ba7fd;
-    padding: 1rem;
-    border-radius: .5rem;
-    border: 0;
-}

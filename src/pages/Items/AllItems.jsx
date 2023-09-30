@@ -1,25 +1,45 @@
+import { Link } from "react-router-dom"
+import useCollection from "../../hooks/useCollection"
+import CustomButton from "../../components/CustomButton"
+
 export default function AllItems() {
+    const { stock } = useCollection()
+
     return (
-        <table style={{width: '100%'}}>
+        <table style={{ width: '100%' }}>
             <thead>
-                <th>ID</th>
-                <th>Nome</th>
-                <th>Em Estoque</th>
-                <th>Categoria</th>
-                <th>Ações</th>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Em Estoque</th>
+                    <th>Categoria</th>
+                    <th>Ações</th>
+                </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>dsfwrgsfhdfgsdgsdsgerg</td>
-                    <td>7 Wonders</td>
-                    <td>8 Unid.</td>
-                    <td>Jogos</td>
-                    <td>
-                        <button>Ver</button>
-                        <button>Atualizar</button>
-                        <button>Excluir</button>
-                    </td>
-                </tr>
+                {stock.map((item) => (
+                    <tr key={item.id}>
+                        <td>{item.id}</td>
+                        <td>{item.name}</td>
+                        <td>{item.quantity}</td>
+                        <td>{item.category}</td>
+                        <td>
+                            <Link to={`/items/${item.id}`}>
+                                <CustomButton
+                                    title="Ver"
+                                    bgColor="#5ba7fd"
+                                />
+                            </Link>
+                            <Link to={`/items/${item.id}/update`}>
+                                <CustomButton
+                                    title="Atualizar"
+                                    color="black"
+                                    bgColor="white"
+                                />
+                            </Link>
+                        </td>
+                    </tr>
+                ))}
             </tbody>
         </table>
     )
