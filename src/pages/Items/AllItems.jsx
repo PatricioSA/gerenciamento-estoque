@@ -28,6 +28,8 @@ export default function AllItems() {
                                 <CustomButton
                                     title="Ver"
                                     bgColor="#5ba7fd"
+                                    marginRight="0.5rem"
+                                    marginBottom="0.5rem"
                                 />
                             </Link>
                             <Link to={`/items/${item.id}/update`}>
@@ -35,6 +37,8 @@ export default function AllItems() {
                                     title="Atualizar"
                                     color="black"
                                     bgColor="white"
+                                    marginRight="0.5rem"
+                                    marginBottom="0.5rem"
                                 />
                             </Link>
                         </td>

@@ -3,12 +3,13 @@ import PropTypes from 'prop-types'
 import useCollection from '../../hooks/useCollection'
 import './itemform.css'
 import StockItem from '../../model/StockItem'
+import CustomButton from '../CustomButton'
 
 ItemForm.propTypes = {
     itemToUpdate: PropTypes.object
 }
 
-export default function ItemForm({itemToUpdate}) {
+export default function ItemForm({ itemToUpdate }) {
     const { addItem } = useCollection()
     const defaultItem = {
         name: '',
@@ -99,12 +100,15 @@ export default function ItemForm({itemToUpdate}) {
             <label htmlFor="description">Descrição</label>
             <textarea
                 id="description"
-                name="description" 
+                name="description"
                 rows="10"
                 value={item.description}
                 onChange={handleChange}
             ></textarea>
-            <button>Salvar</button>
+            <CustomButton
+                title="Salvar"
+                bgColor="#5ba7fd"
+            />
         </form>
     )
 }
