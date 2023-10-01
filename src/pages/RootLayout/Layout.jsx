@@ -5,10 +5,10 @@ export default function RootLayout() {
   return (
     <>
       <header>
-        <Link to="/" className="logo">REACT STOCK</Link>
+        <Link to="/" className="logo">REACT ESTOQUE</Link>
         <nav>
           <Link to="/">Início</Link>
-          <Link to="/items">Items</Link>
+          <Link to="/items">Itens</Link>
         </nav>
       </header>
 
