@@ -5,6 +5,7 @@ import LayoutItemsPage from './pages/Items/LayoutItemsPage/LayoutItemsPage'
 import AllItems from './pages/Items/AllItems'
 import NewItem from './pages/Items/NewItem'
 import IndividualItem from './pages/Items/IndividualItem/IndividualItem'
+import UpdateItem from './pages/Items/UpdateItem'
 
 const router = createBrowserRouter([
     {
@@ -30,7 +31,11 @@ const router = createBrowserRouter([
                     {
                         path: ':id',
                         element: <IndividualItem/>
-                    }
+                    },
+                    {
+                        path: ':id/update',
+                        element: <UpdateItem/>
+                    },
                 ]
             }
         ]

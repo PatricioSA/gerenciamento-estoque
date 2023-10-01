@@ -10,7 +10,7 @@ ItemForm.propTypes = {
 }
 
 export default function ItemForm({ itemToUpdate }) {
-    const { addItem } = useCollection()
+    const { addItem, updateItem } = useCollection()
     const defaultItem = {
         name: '',
         quantity: 0,
@@ -24,10 +24,15 @@ export default function ItemForm({ itemToUpdate }) {
     const handleSubmit = (ev) => {
         ev.preventDefault()
 
-        const stockItem = new StockItem(item)
-        addItem(stockItem)
-        alert('Item cadastrado')
-        setItem(defaultItem)
+        if (itemToUpdate) {
+            updateItem(itemToUpdate.id, item)
+            alert('Item atualizado!')
+        } else {
+            const stockItem = new StockItem(item)
+            addItem(stockItem)
+            alert('Item cadastrado')
+            setItem(defaultItem)
+        }
     }
 
     const handleChange = (ev) => {
