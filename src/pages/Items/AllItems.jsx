@@ -25,7 +25,7 @@ export default function AllItems() {
                         <td>{item.quantity}</td>
                         <td>{item.category}</td>
                         <td>
-                            <Link to={`/items/${item.id}`}>
+                            <Link to={`${item.id}`}>
                                 <CustomButton
                                     title="Ver"
                                     bgColor="#5ba7fd"
@@ -33,7 +33,7 @@ export default function AllItems() {
                                     marginBottom="0.5rem"
                                 />
                             </Link>
-                            <Link to={`/items/${item.id}/update`}>
+                            <Link to={`${item.id}/update`}>
                                 <CustomButton
                                     title="Atualizar"
                                     color="black"

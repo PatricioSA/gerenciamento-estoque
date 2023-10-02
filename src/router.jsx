@@ -9,7 +9,7 @@ import UpdateItem from './pages/Items/UpdateItem'
 
 const router = createBrowserRouter([
     {
-        path: '/<gerenciamento-estoque>',
+        path: '/gerenciamento-estoque/',
         element: <RootLayout/>,
         children: [
             {
@@ -17,7 +17,7 @@ const router = createBrowserRouter([
                 element: <Dashboard/>
             },
             {
-                path: 'items',
+                path: '/gerenciamento-estoque/items/',
                 element: <LayoutItemsPage/>,
                 children: [
                     {

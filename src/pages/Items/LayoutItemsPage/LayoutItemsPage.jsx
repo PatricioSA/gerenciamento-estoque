@@ -10,12 +10,12 @@ export default function LayoutItemsPage() {
 
             <nav className="tabs">
                 <Link
-                    to='/items'
-                    className={`tab ${pathname === '/items' ? 'active' : ''}`}>Todos os itens
+                    to='/gerenciamento-estoque/items'
+                    className={`tab ${pathname === '/gerenciamento-estoque/items' ? 'active' : ''}`}>Todos os itens
                 </Link>
                 <Link
-                    to='/items/new'
-                    className={`tab ${pathname === '/items/new' ? 'active' : ''}`}>Novo item
+                    to='/gerenciamento-estoque/items/new'
+                    className={`tab ${pathname === '/gerenciamento-estoque/items/new' ? 'active' : ''}`}>Novo item
                 </Link>
             </nav>
 
