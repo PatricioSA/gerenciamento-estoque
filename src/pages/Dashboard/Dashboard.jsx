@@ -7,7 +7,7 @@ import './dashboard.css'
 export default function Dashboard() {
     const { stock } = useCollection()
 
-    const inventoryTotal = stock.reduce((accumulator, item) => accumulator + item.quantity, 0)
+    const inventoryTotal = stock.reduce((accumulator, item) => accumulator + Number(item.quantity), 0)
 
     stock.forEach((item) => {
         item.createdAt = new Date(item.createdAt)
