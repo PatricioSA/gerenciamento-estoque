@@ -10,6 +10,9 @@ export default function IndividualItem() {
 
     const item = getItem(id)
 
+    const createdAt = item.createdAt = new Date().toLocaleString()
+    const updatedAt = item.updatedAt = new Date().toLocaleString()
+
     return (
         <section className="individual__item">
             <div>
@@ -38,8 +41,8 @@ export default function IndividualItem() {
             </div>
 
             <div>
-                <p>Cadastrado em: {item.createdAt}</p>
-                <p>Atualizado em: {item.updatedAt}</p>
+                <p>Cadastrado em: {createdAt}</p>
+                <p>Atualizado em: {updatedAt}</p>
             </div>
         </section>
     )

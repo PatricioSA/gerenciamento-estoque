@@ -8,7 +8,7 @@ export default class StockItem {
         this.quantity = Number(quantity)
         this.price = parseFloat(price)
         this.category = category
-        this.createdAt = new Date().toLocaleString()
-        this.updatedAt = new Date().toLocaleString()
+        this.createdAt = new Date()
+        this.updatedAt = new Date()
     }
 }
