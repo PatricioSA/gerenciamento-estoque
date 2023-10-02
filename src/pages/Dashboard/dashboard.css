@@ -1,17 +1,18 @@
 .cards {
     display: flex;
-    /* justify-content: center; */
     flex-wrap: wrap;
     gap: 2rem;
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 .card {
-    width: 22rem;
+    flex-grow: 1;
+    flex-basis: 18rem;
     height: 150px;
     padding: 1rem 2rem;
-    background-color: #1c1a1d;
+    /* background-color: #1c1a1d; */
     border-radius: .5rem;
+    font-weight: 700;
 }
 
 .card p {
@@ -21,5 +22,11 @@
 
 .tables {
     display: flex;
+    flex-wrap: wrap;
     gap: 2rem;
+}
+
+.tables table {
+    flex-grow: 1;
+    flex-basis: 18rem;
 }

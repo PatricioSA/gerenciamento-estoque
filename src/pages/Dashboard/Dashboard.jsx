@@ -26,10 +26,10 @@ export default function Dashboard() {
         <section className='container'>
             <h1>Dashboard</h1>
             <section className="cards">
-                <DashboardCard title='Diversidade de itens' number={stock.length} />
-                <DashboardCard title='Inventário total' number={inventoryTotal} />
-                <DashboardCard title='Itens recentes' number={quantityRecentItems} />
-                <DashboardCard title='Itens acabando' number={lowQuantityTotal} />
+                <DashboardCard title='Diversidade de itens' number={stock.length} bgColor="#A1C099" color="#327220"/>
+                <DashboardCard title='Inventário total' number={inventoryTotal} bgColor="#DF9B55" color="#BA5f00"/>
+                <DashboardCard title='Itens recentes' number={quantityRecentItems} bgColor="#B899C0" color="#683C73"/>
+                <DashboardCard title='Itens acabando' number={lowQuantityTotal} bgColor="#C09999" color="#7B3737"/>
             </section>
 
 
@@ -46,8 +46,8 @@ export default function Dashboard() {
                             <tr key={item.id}>
                                 <td>{item.name}</td>
                                 <td>
-                                    <Link to={`item/${item.id}`}>
-                                        <CustomButton title="Ver" bgColor="#fff" color="black" />
+                                    <Link to={`items/${item.id}`}>
+                                        <CustomButton title="Ver" bgColor="#A1C099" color="#327220" />
                                     </Link>
                                 </td>
                             </tr>
@@ -69,8 +69,8 @@ export default function Dashboard() {
                                 <td>{item.name}</td>
                                 <td>{item.quantity}</td>
                                 <td>
-                                    <Link to={`item/${item.id}`}>
-                                        <CustomButton title="Ver" bgColor="#fff" color="black" />
+                                    <Link to={`items/${item.id}`}>
+                                        <CustomButton title="Ver" bgColor="#A1C099" color="#327220" />
                                     </Link>
                                 </td>
                             </tr>
