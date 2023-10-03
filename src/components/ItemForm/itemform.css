@@ -9,6 +9,10 @@
     gap: 2rem;
 }
 
+.wrapper div {
+    flex-grow: 1;
+}
+
 input, select, textarea {
     display: block;
     width: 100%;
